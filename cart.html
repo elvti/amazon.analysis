@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #222f3e;
+  color: white;
+  
+}
+    
+/* Header grid layout */
+.header-layout{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 30px;
+  grid-gap: 3px;
+}
+
+/* Increase the font size of the headings */
+.header h1 {
+  text-align:left;
+  font-size: 20px;
+}
+
+.header p {
+  text-align:left;
+  color: #b4b6b8
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #222f3e;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #b4b6b8;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  border: 0.5px solid #97a4b1;
+  border-radius: 2px;
+  padding: 9px 19px;
+}
+    
+/* Column container */
+.main {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+  text-align:left;
+  padding: 20px !important;
+}
+    
+.shopping-list {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px;
+  grid-gap: 10px;
+}
+    
+.item-link:link {
+  text-decoration:none;
+  color: #1367cb;
+  font-size: 20px;
+  
+}
+.item-link:hover {
+  text-decoration:underline;
+  color: #ff963d;
+  font-size: 20px;
+}
+    
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color:white;
+  font-size: 12px;
+  background-color: #222f3e;
+}
+    
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+    
+* {
+  box-sizing: border-box;
+}
+</style>
+    
+<body>
+    
+<div class="header">
+  <div class="header-layout">
+    <img src="images/logo.png" style="vertical-align: bottom; width: 100%; grid-row:1/3; grid-column: 1">
+    <h1 style="grid-row:1; grid-column: 2">Amazon's Enticing Sugarcoat - A Historical Analysis</h1>
+    <p style="grid-row:2; grid-column: 2">How its homepage is designed to gain your trust</p>
+  </div>
+  
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="immersion.html">Immersion</a>
+  <a href="reliability.html">Reliability</a>
+  <a href="sources.html">Sources</a>
+  <a onclick="myFunction()" href="#" class="right" id="conclusion" style="color:white"><b>Cart</b></a>
+</div>
+    
+<div class="main">
+  <h2 style="width:100%; line-height: 5px;">Shopping Cart</h2>
+  <h3 style="width:100%; line-height: 5px;">Your cart is empty.</h3>
+  <a style= "width:100%" href="https://amzn.to/2K8NOeD">Shop now</a>
+  <h3 style="width:100%; line-height: 10px;">Saved for later (3 items)</h3>
+  <div class="shopping-list">
+    <img src="images/nothing.png" style="width: 100px; height: 100px; grid-row:1; grid-column: 1">
+    <div style="grid-row:1; grid-column:2">
+        <a class="item-link" href="https://amzn.to/2Ovh43v" ><b>Gift of Nothing</b></a>
+        <p style="font-size:14px; color:#c71200">Currently unavailable</p>
+    </div>
+    <img src="images/colorbook.png" style="width: 100px; height: 100px; grid-row:2; grid-column: 1">
+    <div style="grid-row:2; grid-column:2">
+        <a class="item-link" href="https://amzn.to/2KfuFXb" ><b>The Farting Animals Coloring Book</b></a>
+        <p style="font-size:14px; color:#c71200">In stock</p>
+    </div>
+    <img src="images/coinbank.png" style="width: 100px; height: 100px; grid-row:3; grid-column: 1">
+    <div style="grid-row:3; grid-column:2">
+        <a class="item-link" href="https://amzn.to/2LSx4KI"><b>Powstro Face Bank Coin Eating Saving Bank Automatic Money Saving Box (Pink)</b></a>
+        <p style="font-size:14px; color:#c71200">In stock</p>
+    </div>
+  </div>
+</div>
+    
+<div class="footer">
+  <p>A website created by Anthony Tang, Cindy Wang, Danni Chen, Kaihan Yang, and Sideny Lin<br>Aug 1, 2019</p>
+</div>
+    
+<script>
+    var x=0;
+    function myFunction(){
+        if (x<2){
+            x++;
+        }
+        else if (x==2){
+            document.getElementById("conclusion").onclick="";
+            document.getElementById("conclusion").href="conclusion.html";
+        }
+        else{}
+    }
+</script>
+
+</body>
+</html>

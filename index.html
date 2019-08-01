@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #222f3e;
+  color: white;
+  
+}
+    
+/* Header grid layout */
+.header-layout{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 30px;
+  grid-gap: 3px;
+}
+
+/* Increase the font size of the headings */
+.header h1 {
+  text-align:left;
+  font-size: 20px;
+}
+
+.header p {
+  text-align:left;
+  color: #b4b6b8
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #222f3e;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #b4b6b8;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  border: 0.5px solid #97a4b1;
+  border-radius: 2px;
+  padding: 9px 19px;
+}
+
+/* Column container */
+.main {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+  text-align:left;
+}
+    
+/* Individual white boxes*/
+.box {
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  border: 10px solid #f1f1f1 !important;
+  background-color: white;
+  padding: 20px !important;
+}
+    
+/* Sign in box layout */
+.box-layout{
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 20px 1fr;
+  grid-gap: 3px;
+}
+
+/* Zoomable fake img */
+.zoom {
+  background-color:#aaa;
+  width: 100%;
+  padding: 20px;
+  transition: transform .2s;
+}
+
+/* Zoom on hover */
+.zoom:hover {
+  -ms-transform: scale(1.25); /* IE 9 */
+  -webkit-transform: scale(1.25); /* Safari 3-8 */
+  transform: scale(1.25); 
+}
+    
+/* Formatting for links at the bottom of boxes*/
+.hoverlink:link {
+  text-decoration:none;
+}
+.hoverlink:hover {
+  text-decoration:underline;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color:white;
+  font-size: 12px;
+  background-color: #222f3e;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .main {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  background-color: #f1f1f1;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 14.28%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<div class="header">
+  <div class="header-layout">
+    <img src="images/logo.png" style="vertical-align: bottom; width: 100%; grid-row:1/3; grid-column: 1">
+    <h1 style="grid-row:1; grid-column: 2">Amazon's Enticing Sugarcoat - A Historical Analysis</h1>
+    <p style="grid-row:2; grid-column: 2">How its homepage is designed to gain your trust</p>
+  </div>
+  
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="immersion.html">Immersion</a>
+  <a href="reliability.html">Reliability</a>
+  <a href="sources.html">Sources</a>
+  <a href="cart.html" class="right" style="color:white"><b>Cart</b></a>
+</div>
+
+
+<div class="container">
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 7</div>
+    <img src="slideshow/1995.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 7</div>
+    <img src="slideshow/2001.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 7</div>
+    <img src="slideshow/2005.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 7</div>
+    <img src="slideshow/2007.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 7</div>
+    <img src="slideshow/2011.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+    <img src="slideshow/2013.png" style="width:100%">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="slideshow/2016.png" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="slideshow/1995.png" style="width:100%" onclick="currentSlide(1)" alt="1995: The original design of amazon.com">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slideshow/2001.png" style="width:100%" onclick="currentSlide(2)" alt="2001: Amazon features new logo, makes first profit, and expands internationally">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slideshow/2005.png" style="width:100%" onclick="currentSlide(3)" alt="2005: Amazon introduces Prime services">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slideshow/2007.png" style="width:100%" onclick="currentSlide(4)" alt="2007: Amazon introduces the revolutionary kindle device">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slideshow/2011.png" style="width:100%" onclick="currentSlide(5)" alt="2011: Amazon Instant Video is now available to Prime members">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="slideshow/2013.png" style="width:100%" onclick="currentSlide(6)" alt="2013: Catalogue-like Website era pushes profit, Prime gains permanent presence">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slideshow/2016.png" style="width:100%" onclick="currentSlide(7)" alt="2016: Website features a highly interactive, immersive, and responsive UI">
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class= "box">
+    <div class="box-layout">
+      <img src="images/profile.png" style="width: 100%; grid-row:1/3; grid-column: 1">
+      <h2 style="width:100%; line-height:10px; grid-row: 1; grid-column: 2">Hi,</h2>
+      <p style="grid-row: 2; grid-column: 2"> <a href="signin.html">Sign in</a> for recommendations</p>
+    </div>
+    <img class="zoom" src="images/cart.png" style="height: 60%; padding: 0px; border: 1px solid #f1f1f1">
+    <p></p>
+    <a class="hoverlink" href="cart.html" style="padding-top:20px">View Cart</a>
+  </div>
+  <div class="box">
+    <h3 style="width:100%">Creating Immersive Browsing Experience</h3>
+    <img class="zoom" src="images/shopping.png" style="height:60%; padding: 0px; border: 1px solid #f1f1f1">
+    <p style="width:100%">How Amazon uses immersive experience to bond with consumers</p>
+    <a class="hoverlink" href="immersion.html">Read more</a>
+  </div>
+  <div class="box">
+    <h3 style="width:100%">Advertising Reliability</h3>
+    <img class="zoom" src="images/cozy.png" style="height:50%; padding: 0px; border: 1px solid #f1f1f1">
+    <p style="width:100%">How Amazon advertises its reliability to ensure retention of customers</p>
+    <a class="hoverlink" href="reliability.html">Read more</a>
+  </div>
+</div>
+<div class="footer">
+  <p>A website created by Anthony Tang, Cindy Wang, Danni Chen, Kaihan Yang, and Sideny Lin<br>Aug 1, 2019</p>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
+

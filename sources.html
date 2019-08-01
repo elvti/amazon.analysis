@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #222f3e;
+  color: white;
+}
+    
+/* Header grid layout */
+.header-layout{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 30px;
+  grid-gap: 3px;
+}
+
+/* Increase the font size of the headings */
+.header h1 {
+  text-align:left;
+  font-size: 20px;
+}
+
+.header p {
+  text-align:left;
+  color: #b4b6b8
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #222f3e;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #b4b6b8;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  border: 0.5px solid #97a4b1;
+  border-radius: 2px;
+  padding: 9px 19px;
+}
+    
+/* Column container */
+.main {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+  text-align:left;
+  width: 100%;
+  padding-left: 20px;
+}
+
+li {
+  word-wrap: break-word;
+}
+    
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color:white;
+  font-size: 12px;
+  background-color: #222f3e;
+}
+    
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+    
+* {
+  box-sizing: border-box;
+}
+</style>
+    
+<body>
+    
+<div class="header">
+  <div class="header-layout">
+    <img src="images/logo.png" style="vertical-align: bottom; width: 100%; grid-row:1/3; grid-column: 1">
+    <h1 style="grid-row:1; grid-column: 2">Amazon's Enticing Sugarcoat - A Historical Analysis</h1>
+    <p style="grid-row:2; grid-column: 2">How its homepage is designed to gain your trust</p>
+  </div>
+  
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="immersion.html">Immersion</a>
+  <a href="reliability.html">Reliability</a>
+  <a href="sources.html">Sources</a>
+  <a href="cart.html" class="right" style="color:white"><b>Cart</b></a>
+</div>
+    
+<div class="main">
+  <h2 style="line-height: 5px; padding-top:20px">Works Cited</h2> 
+  <ul>
+      <li>“Amazon.com Announces ZShops.” Geek.com, 30 Sept. 1999, www.geek.com/news/amazoncom-announces-zshops-566714/.</li>
+      <li>“Amazon.com: Low Prices – Fast Shipping – Millions of Items.” Amazon.com: Low Prices – Fast Shipping – Millions of Items, www.amazon.com/.</li>
+      <li>Bausch, Paul. “Amazon Hacks.” O'Reilly | Safari, O'Reilly Media, Inc., www.oreilly.com/library/view/amazon-hacks/0596005423/ch04s02.html.</li>
+      <li>Bates, M. (1989) “The Design of Browsing and Berrypicking Techniques for the Online Search Interface”</li>
+      <li>Bishop, Todd. “The Cost of Convenience: Amazon's Shipping Losses Top $7B for First Time.” GeekWire, 18 June 2017, <br>www.geekwire.com/2017/true-cost-convenience-amazons-annual-shipping-losses-top-7b-first-time/.</li>
+      <li>Blum, Jeremy, “iPad Air ells out in two hours on Hong Kong Online Apple Store”, South China Morning Post, SCMP, Nov 1, 2013, <br>https://www.scmp.com/news/china-insider/article/1345463/ipad-air-sells-out-two-hours-hong-kong-online-apple-store </li>
+      <li>Byrnes, Nanette, and Nanette Byrnes. “Amazon's Creation of Its Own Holiday, Prime Day, Appears to Be Paying Off.” MIT Technology Review, MIT Technology Review, <br>12 July 2016, www.technologyreview.com/s/601889/how-amazon-loses-on-prime-and-still-wins/.</li>
+      <li>“Faceted Metadata for Image Search and Browsing.” ACM Digital Library, ACM, dl.acm.org/citation.cfm?id=642681.</li>
+      <li>Ferranti, Marc. “Bezos: Net Personalization Is Key.” Computerworld, IDG News Service, 28 June 2000, <br>www.computerworld.com/article/2596081/bezos--net-personalization-is-key.html.</li>
+      <li>Flanagan, Jennifer. “6 Ways Amazon Has Changed Buying Behaviors.” Total Retail, 12 Sept. 2018, <br>www.mytotalretail.com/article/6-ways-amazon-has-changed-buying-behaviors/#.</li>
+      <li>“Home.” EcommerceBytes, www.ecommercebytes.com/cab/abu/y200/m11/abu0026/s02.</li>
+      <li>“Information Architecture.” Google Books, <br>books.google.com/books?id=dZaJCgAAQBAJ&pg=PA47&lpg=PA47&dq=berrypicking search and <br>amazon&source=bl&ots=o7zlQocm1q&sig=ACfU3U22BdHg1N27yO13lJcEm25MnT8uFg&hl=zh-CN&sa=X&ved=<br>2ahUKEwiyxPeziM3jAhXQu54KHamjAm84ChDoATAAegQICRAB#v=onepage&q=berrypicking search and amazon&f=false.</li>
+      <li>Internet Archive: Wayback Machine, archive.org/web/.</li>
+      <li>“iPhone 5 Pre-Orders Top Two Million in First 24 Hours”, Apple Newsroom,Apple Inc. Sept 17,2012, <br>https://www.apple.com/newsroom/2012/09/17iPhone-5-Pre-Orders-Top-Two-Million-in-First-24-Hours/</li>
+      <li>Jarvelainen, et al. "Co-created Effective, Agile, and Trusted eServices." Google Books, Springer, 5 July 2013, books.google.com/books?id=rSi6BQAAQBAJ&pg<br>=PA43&lpg=PA43&dq=%22matthew+effect%22+on+popular+websites+%22Amazon%22&source=bl&ots=kgaqWsOUcm&sig=<br>ACfU3U36CaKuwalhYxPM9umpSU0QC1y4ig&hl=en&sa=X&ved=2ahUKEwjQsITuk9fjAhUeIDQIHStODVwQ6AEwFnoECAkQAQ#v=onepage&q=%22matthew%20<br>effect%22%20on%20popular%20websites%20%22Amazon%22&f=false. Accessed 31 July 2019.</li>
+      <li>Johnson, Bobbie. “Amazon Busts through Recession with Profit Surge.” The Guardian, Guardian News and Media, 23 Oct. 2009, www.theguardian.com/technology/2009/oct/23/amazon-profits.</li>
+      <li>Knobel, C. Bowker, G. (2011). “Computing Ethics Values in Design: Focusing on socio-technical design with values as a critical component in the design process. Communications of the ACM.</li>
+      <li>Linden, Greg, Brent Smith and Jeremy York, Amazon.com Recommendations: Item-to-Item Collaborative Filtering, Industry Report, Feb 2003. </li>
+      <li>Team, Trefis. “Why Amazon Has Launched A New Credit Card For Prime Users.” Forbes, Forbes Magazine, 18 Jan. 2017, www.forbes.com/sites/greatspeculations/2017/01/18/why-amazon-has-launched-a-new-credit-card-for-prime-users/#7f8c49d135f5.</li>
+</ul>
+
+</div>
+    
+<div class="footer">
+  <p>A website created by Anthony Tang, Cindy Wang, Danni Chen, Kaihan Yang, and Sideny Lin<br>Aug 1, 2019</p>
+</div>
+
+</body>
+</html>
